@@ -1,1 +1,3 @@
-# ha_addon
+# Repository pour Home Assistant
+
+a ajouter aux modules complémentaires
