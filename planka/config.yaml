@@ -1,0 +1,39 @@
+name: Planka
+version: 1.0.0
+slug: my_planka
+description: Planka for Home Assistan.
+  Free open source kanban board for workgroups
+url: https://planka.app/
+arch:
+  - amd64
+  - aarch64
+homeassistant_api: false
+auth_api: false
+host_network: true
+ingress: true
+ingress_port: 3000
+panel_icon: mdi:format-list-checks
+panel_title: Planka
+panel_admin: false
+uart: false
+map:
+  - addon_config:rw
+init: true
+advanced: false
+stage: experimental
+tmpfs: false
+options:
+  log_level: info
+  base_url: http://localhost
+  base_port: 3000
+  database_url: postgresql://postgres@postgres/planka
+  secret_key: notsecretkey
+schema:
+  log_level: list(debug|info|warning|error)
+  base_url: url
+  base_port: port
+  database_url: url
+  secret_key: password
+privileged:
+  - SYS_ADMIN
+  - DAC_READ_SEARCH
